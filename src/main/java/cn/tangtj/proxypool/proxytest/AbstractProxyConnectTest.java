@@ -11,13 +11,18 @@ import java.io.IOException;
 
 /**
  * @author tang
- * @date 2019/9/14
+ * @date 2019/9/30
  */
-public class CheckIp implements ProxyConnectTest {
+public abstract class AbstractProxyConnectTest implements ProxyConnectTest {
 
-    private String checkUrl = "https://www.baidu.com";
+    protected final String testUrl;
 
-    private Request request = new Request.Builder().url(checkUrl).get().build();
+    private Request request;
+
+    public AbstractProxyConnectTest(String testUrl) {
+        this.testUrl = testUrl;
+        this.request = new Request.Builder().url(testUrl).get().build();
+    }
 
     @Override
     public boolean test(OkHttpClient client, String ip) throws RequestException {

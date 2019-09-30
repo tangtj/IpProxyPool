@@ -7,7 +7,7 @@ import cn.tangtj.proxypool.pool.HttpClientPool;
 import cn.tangtj.proxypool.pool.IpProxyStore;
 import cn.tangtj.proxypool.pool.ProxyKeepPool;
 import cn.tangtj.proxypool.pool.ProxyTestPool;
-import cn.tangtj.proxypool.proxytest.CheckIp;
+import cn.tangtj.proxypool.proxytest.BaiduProxyConnectTest;
 import cn.tangtj.proxypool.proxytest.ProxyConnectTest;
 import cn.tangtj.proxypool.util.TimeUtils;
 import okhttp3.OkHttpClient;
@@ -27,7 +27,7 @@ public class ProxyKeepTask {
 
     private final IpProxyStore keepPool;
 
-    private ProxyConnectTest connectTest = new CheckIp();
+    private ProxyConnectTest connectTest = new BaiduProxyConnectTest();
 
     private HttpClientPool clientPool;
 
