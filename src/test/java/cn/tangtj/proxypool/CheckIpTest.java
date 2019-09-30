@@ -1,5 +1,6 @@
 package cn.tangtj.proxypool;
 
+import cn.tangtj.proxypool.proxytest.CheckIp;
 import okhttp3.OkHttpClient;
 import org.junit.Test;
 

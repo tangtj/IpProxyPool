@@ -1,4 +1,4 @@
-package cn.tangtj.proxypool;
+package cn.tangtj.proxypool.domain;
 
 /**
  * @author tang

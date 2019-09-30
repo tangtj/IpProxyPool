@@ -1,6 +1,5 @@
 package cn.tangtj.proxypool.task;
 
-import cn.tangtj.proxypool.CheckIp;
 import cn.tangtj.proxypool.domain.ProxyRateInfo;
 import cn.tangtj.proxypool.domain.ProxyRateLevel;
 import cn.tangtj.proxypool.exception.RequestException;
@@ -8,6 +7,7 @@ import cn.tangtj.proxypool.pool.HttpClientPool;
 import cn.tangtj.proxypool.pool.IpProxyStore;
 import cn.tangtj.proxypool.pool.ProxyKeepPool;
 import cn.tangtj.proxypool.pool.ProxyTestPool;
+import cn.tangtj.proxypool.proxytest.CheckIp;
 import cn.tangtj.proxypool.proxytest.ProxyConnectTest;
 import cn.tangtj.proxypool.util.TimeUtils;
 import okhttp3.OkHttpClient;

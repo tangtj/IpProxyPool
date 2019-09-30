@@ -1,7 +1,7 @@
 package cn.tangtj.proxypool.proxytest;
 
 
-import cn.tangtj.proxypool.HttpType;
+import cn.tangtj.proxypool.domain.HttpType;
 
 /**
  * @author tang

@@ -1,7 +1,6 @@
-package cn.tangtj.proxypool;
+package cn.tangtj.proxypool.proxytest;
 
 import cn.tangtj.proxypool.exception.RequestException;
-import cn.tangtj.proxypool.proxytest.ProxyConnectTest;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
