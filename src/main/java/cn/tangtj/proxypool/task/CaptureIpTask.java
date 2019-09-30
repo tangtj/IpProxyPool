@@ -19,21 +19,27 @@ import java.util.List;
 @Component
 public class CaptureIpTask {
 
-    private final int minSize = 200;
+    private static final int TEST_MIN_SIZE = 200;
+
+    private static final int KEEP_MIN_SIZE = 100;
 
     private final List<AbstractPeriodProxyCapture> proxyCaptures;
 
     private IpProxyStore ipProxyStore;
+
+    private IpProxyStore keepPool;
 
     public CaptureIpTask(List<AbstractPeriodProxyCapture> proxyCaptures) {
         this.proxyCaptures = proxyCaptures;
         ipProxyStore = ProxyTestPool.getInstance().getPool();
     }
 
-    @Scheduled(cron = "0 0/1 * * * ?")
+    //每30分钟执行一次
+    @Scheduled(cron = "0 0/30 * * * ?")
     public void capture() {
 
-        if (ipProxyStore.size() > minSize) {
+        //检查当前,ip是否已满足需求.
+        if (ipProxyStore.size() > TEST_MIN_SIZE || keepPool.size() > KEEP_MIN_SIZE) {
             return;
         }
 

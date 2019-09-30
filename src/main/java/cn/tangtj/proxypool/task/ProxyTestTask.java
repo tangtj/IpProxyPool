@@ -36,7 +36,7 @@ public class ProxyTestTask {
         clientPool = HttpClientPool.getInstance();
     }
 
-    @Scheduled(cron = "0/1 * * * * ?")
+    @Scheduled(cron = "0/5 * * * * ?")
     public void test() {
         ThreadUtils.execute(() -> {
             if (testPool.size() == 0) {

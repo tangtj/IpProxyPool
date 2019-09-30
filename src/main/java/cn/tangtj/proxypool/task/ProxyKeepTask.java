@@ -37,7 +37,7 @@ public class ProxyKeepTask {
         clientPool = HttpClientPool.getInstance();
     }
 
-    @Scheduled(cron = "0 0/5 * * * ?")
+    @Scheduled(cron = "0 0/10 * * * ?")
     public void test() {
         if (keepPool.size() == 0) {
             return;
